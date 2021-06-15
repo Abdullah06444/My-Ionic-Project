@@ -1,0 +1,42 @@
+{
+
+    "courses":
+    [
+        {
+
+            "id":1,
+            "name":"C ve Cpp Kursu",
+            "price":800
+        },
+        {
+
+            "id":2,
+            "name":"Matlab ve AutoCad Kursu",
+            "price":800
+        },
+        {
+
+            "id":3,
+            "name":"Java ve Spring Kursu",
+            "price":1500
+        },
+        {
+
+            "id":4,
+            "name":"Python3 ve Django Kursu",
+            "price":1400
+        },
+        {
+
+            "id":5,
+            "name":"Android ve Kotlin Kursu",
+            "price":2200
+        },
+        {
+
+            "id":6,
+            "name":"Angular ve Ionic Kursu",
+            "price":2000
+        }
+    ]
+}

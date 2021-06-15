@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start" *ngIf="sub">
+      <ion-button (click)="sub = !sub">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">
+      İl Kütüphaneleri
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="false">
+  <ion-list *ngIf="!sub">
+    <ion-list-header>
+      İller
+    </ion-list-header>
+    <ion-item *ngFor="let il of iller">
+
+      <ion-label class="ion-text-wrap">
+        {{il.categoryname}}
+      </ion-label>
+      
+      <ion-note slot="end" color="danger" (click)="getDetail(il.categorycode, il.categoryname)">
+        Detay
+      </ion-note>
+    </ion-item>
+  </ion-list>
+
+  <ion-list *ngIf="sub">
+    
+    <ion-list-header>
+      {{categoryName}}
+    </ion-list-header>
+    
+    <ion-item *ngFor="let d of detay" (click)="showDetail(d)">
+
+      <ion-label class="ion-text-wrap">
+        {{d.brancheData.branchname}}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

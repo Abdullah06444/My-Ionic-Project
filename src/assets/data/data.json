@@ -1,0 +1,66 @@
+{
+
+    "data":
+    [
+        {
+            "id":1,
+            "title":"SAYFA 1",
+            "desc":"Sayfa 1 Açıklama",
+            "status":true,
+            "definition":"Ben Abdullah, Türkiye Malatya’da 1995’de doğdum. 2019 Temmuz’unda Ankara Üniversitesi bilgisayar mühendisliğinden (ing.) mezun oldum. Çok çeşitli programlama dilleri ile çalıştım. Web uygulamaları için PHP ve Javascript kullanırım. WordPress’i de bilirim. Her ne zaman yüksek performansa ihtiyaç duyduğumda açıkçası Cpp ve C# ile giderim ve nihayet prototipler oluştururken veya hobi projelerim üzerinde çalışırken Python, Java’ya geri dönerim.",
+            "subPages":
+            [
+                {
+
+                    "id":1,
+                    "title":"RESİMLER",
+                    "desc":"Resim Albümü",
+                    "status":true,
+                    "gallery":
+                    {
+                        "id":1,
+                        "name":"Galeri 1",
+                        "items":
+                        [
+                            {
+
+                                "id":1,
+                                "name":"Favicon",
+                                "image":"assets/icon/favicon.png"
+                            },
+                            {
+
+                                "id":2,
+                                "name":"Logo",
+                                "image":"assets/images/logom.PNG"
+                            }
+                        ]
+                    }
+                },
+                {
+                    
+                    "id":2,
+                    "title":"VİDEOLAR",
+                    "desc":"Video",
+                    "status":false
+                }
+            ]
+        },
+        {
+            "id":2,
+            "title":"SAYFA 2",
+            "desc":"Sayfa 2 Açıklama",
+            "status":true,
+            "definition":"Öğrenecekleriniz<br/> -Angular diline hakim olarak programlama yapabileceksiniz.<br/> -Android programlama dünyasının detaylarına Ionic sayesinde hakim olacaksınız.<br/> -Tam anlamıyla profesyonel bir şekilde uygulama geliştirebileceksiniz.<br/> -Aklınıza gelebilecek olan tüm fikirlerinizi mobil uygulamaya dönüştürebileceksiniz.<br/> -Geliştirdiğiniz uygulamanızı Google Play gibi platformlar ile birçok kişiye ulaştırabileceksiniz.",
+            "subPages":[]
+        },
+        {
+            "id":3,
+            "title":"SAYFA 3",
+            "desc":"Sayfa 3 Açıklama",
+            "status":true,
+            "definition":"",
+            "subPages":[]
+        }
+    ]
+}

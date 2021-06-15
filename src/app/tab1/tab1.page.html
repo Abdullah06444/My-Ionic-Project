@@ -1,0 +1,331 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title style="text-align: center;">
+      {{pageTitle}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="false">
+  
+  <!--<ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 1</ion-title>
+    </ion-toolbar>
+  </ion-header>-->
+  
+  <img src="assets/images/logom.PNG" class="center"/>
+
+  <ion-list>
+    <ion-item (click)="firstFunction()">
+      Ana Ekran
+    </ion-item>
+    <ion-item (click)="getHakkimda()">
+      Hakkımda
+    </ion-item>
+    <ion-item (click)="getIcerik()">
+      Kurs İçerikleri
+    </ion-item>
+    <ion-item (click)="getHocalar()">
+      Hocalarımız
+    </ion-item>
+    <ion-item (click)="getIletisim()">
+      İletişim
+    </ion-item>
+
+
+    <ion-item>
+      <ion-input [(ngModel)]="inputt" type="text" placeholder="İsminizi Giriniz"></ion-input>
+      <ion-button (click)="onClick()" expand="block" fill="clear" shape="round" color="danger">
+        Kaydet
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <div>{{name}}</div>
+  <ion-button (click)="secondFunction(name)" expand="block" fill="clear" shape="round" color="danger">
+    Sayfa Başlığını İsmin Yap
+  </ion-button>
+
+  <!--<div>
+    {{page.id}}<br/>
+    {{page.title}}
+  </div>-->
+
+  <diV *ngIf="sayfa && flag==2">
+
+    <div class="content">
+      
+      <!-- <p>dive giriyor 2/4</p> -->
+      <h6 class="backColor">Hakkımda</h6>
+
+      <img src="https://www.abdullahgur.com.tr/wp-content/uploads/elementor/thumbs/Myprofilee-ozl3l9tqc2g9xmj6rzmxgke8lj3iub2ltktkdn6ojk.png" height="300" width="150" alt="Foto Yüklenemedi." class="images">
+
+      <p>{{sayfa[0].definition}}</p><br/>
+    </div>
+  </diV>
+
+  <diV *ngIf="sayfa && flag==3">
+
+    <div class="content">
+      
+      <!-- <p>dive giriyor 2/4</p> -->
+      <h6 class="backColor">Kurs İçerikleri</h6>
+
+      <img src="https://www.pngjoy.com/pngl/380/7029425_languages-icon-programming-languages-icons-png-png-download.png" height="300" width="400" alt="Foto Yüklenemedi." class="images">
+
+      <p>{{sayfa[1].definition}}</p><br/>
+    </div>
+  </diV>
+
+  <div *ngIf="flag==4" id="social">
+
+    <h6 class="backColor">İletişim</h6>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <div>
+    <a href="https://www.abdullahgur.com.tr" target="_blank"><i class="fa fa-sitemap"></i></a>
+    <a href="https://github.com/Abdullah06444" target="_blank"><i class="fa fa-github"></i></a>
+    <a href="https://gitlab.com/Abdullah06444" target="_blank"><i class="fa fa-gitlab"></i></a>
+    </div>
+    
+    <div>
+    <a href="https://www.linkedin.com/in/abdullah-g%C3%BCr-b86b9616b/" target="_blank"><i class="fa fa-linkedin"></i></a>
+    <a href="https://twitter.com/abdullah44gur" target="_blank"><i class="fa fa-twitter"></i></a>
+    <a href="https://www.instagram.com/abdullah06444/" target="_blank"><i class="fa fa-instagram"></i></a>
+    <a href="https://www.youtube.com/channel/UCCY6a6z-gZyybCfnUsuQ8OQ" target="_blank"><i class="fa fa-youtube"></i></a>
+    </div>
+
+    <div>
+      <p>Formu doldurun en kısa sürede geri dönüş yapacağım.<br/>
+          Site yöneticisi ile iletişime geçmek içindir. O yüzden<br/>
+          mail bilginizi ve mesajınızı doğru bir şekilde girmeniz gerekmektedir.</p>
+    </div>
+        
+    <div>
+      
+      <form [formGroup]="contactForm" class="content">
+  
+        <div class="contentparagraph">
+            Ad Soyad: <input formControlName="adsoyad" style="color: black;"/>
+            <span *ngIf="contactForm.get('adsoyad').errors &&
+            contactForm.get('adsoyad').hasError('required')" style="color:rgb(255, 74, 98);">
+            Kullanıcı Adı Zorunludur.</span>
+        </div>
+        <div class="contentparagraph">
+            E-posta: <input formControlName="eposta" style="color: black;"/>
+            <span *ngIf="contactForm.get('eposta').errors &&
+            contactForm.get('eposta').hasError('required')" style="color:rgb(255, 74, 98);">
+            Mail adresi Zorunludur.</span>
+            <span *ngIf="contactForm.get('eposta').errors &&
+            contactForm.get('eposta').hasError('email')">
+            Geçerli bir Mail adresi Zorunludur.</span>
+        </div>
+        <div class="contentparagraph">
+            Telefon: <input formControlName="telefon" style="color: black;"/>
+        </div>
+        <div class="contentparagraph">
+            Mesaj: <textarea formControlName="mesaj" rows="5" style="color: rgb(63, 54, 54);"></textarea>
+            <span *ngIf="contactForm.get('mesaj').errors &&
+            contactForm.get('mesaj').hasError('required')" style="color:rgb(255, 74, 98);">
+            Mail kutusu boş bırakılmaz.</span>
+            <span *ngIf="contactForm.get('mesaj').errors &&
+            contactForm.get('mesaj').hasError('minLength')" style="color:rgb(255, 74, 98);">
+            Minimum 25 Karakter olmalıdır.</span>
+            <span *ngIf="contactForm.get('mesaj').errors &&
+            contactForm.get('mesaj').hasError('maxLength')" style="color:rgb(255, 74, 98);">
+            Maximum 500 Karakter olmalıdır.</span>
+        </div>
+        <div>
+            <ion-button (click)="mesajGonder()">Gönder</ion-button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <diV *ngIf="flag==1">
+
+    <div class="content">
+      
+      <!-- <p>dive giriyor 2/4</p> -->
+      <h6 class="backColor">Hocalarımız</h6>
+      <div class="info-details-subpage">
+        <table border="0" cellpadding="0" cellspacing="0" style="width:668px;" width="667" class="table">
+    
+        <tbody>
+          <tr height="33">
+            <td height="33" style="color:chartreuse; height:33px;width:95px;">UNVAN</td>
+            <td style="color:chartreuse; width:153px;">ADI</td>
+            <td style="color:chartreuse; width:99px;">SOYADI</td>
+            <td style="color:chartreuse; width:115px;">SANTRAL</td>
+            <td style="color:chartreuse; width:207px;">E MAİL</td>
+          </tr>
+
+        <tr height="33">
+          <td height="33" style="height:33px;width:95px;">Prof. Dr.</td>
+          <td style="width:153px;">Oğuzhan&nbsp;</td>
+          <td style="width:99px;">YILMAZ</td>
+          <td style="width:115px;">800 06 14-15</td>
+          <td style="width:207px;"><a href="mailto:oguzhanyilmaz@gazi.edu.tr"><font color="#333333">oguzhanyilmaz@gazi.edu.tr</font></a></td>
+        </tr>
+        <tr height="33">
+          <td height="33" style="height:33px;width:95px;">Öğr. Gör.</td>
+          <td style="width:153px;">İbrahim Cihan</td>
+          <td style="width:99px;">YETİŞKEN</td>
+          <td style="width:115px;">800 06 14-15</td>
+          <td style="width:207px;">cyetisken@gazi.edu.tr</td>
+        </tr>
+        <tr height="33">
+          <td height="33" style="height:33px;width:95px;">Öğr. Gör.</td>
+          <td style="width:153px;">Süleyman Emre</td>
+          <td style="width:99px;">EYİMAYA</td>
+          <td style="width:115px;">800 06 14-15</td>
+          <td style="width:207px;"><a href="mailto:eyimaya@gazi.edu.tr"><font color="#333333">eyimaya@gazi.edu.tr</font></a></td>
+        </tr>
+    <tr height="33">
+    <td height="33" style="height:33px;width:95px;">Doç.Dr.</td>
+    <td style="width:153px;">Mehmet&nbsp;</td>
+    <td style="width:99px;">YÜKSEL</td>
+    <td style="width:115px;">800 06 14-15</td>
+    <td style="width:207px;"><a href="mailto:yukselmehmet@gazi.edu.tr"><font color="#333333">yukselmehmet@gazi.edu.tr</font></a></td>
+    </tr>
+    <tr height="33">
+    <td height="33" style="height:33px;width:95px;">Doç.Dr.</td>
+    <td style="width:153px;">Battal&nbsp;</td>
+    <td style="width:99px;">DOĞAN</td>
+    <td style="width:115px;">800 06 14-15</td>
+    <td style="width:207px;"><a href="mailto:farukacar.bm@gmail.com"><font color="#333333">bttldgn.gmail.com</font></a></td>
+    </tr>
+    <tr height="33">
+    <td height="33" style="height:33px;width:95px;">Öğr. Gör. Dr.</td>
+    <td style="width:153px;">Hakan</td>
+    <td style="width:99px;">GEDİK</td>
+    <td style="width:115px;">800 06 14-15</td>
+    <td style="width:207px;"><a href="mailto:hgedik@gmail.com"><font color="#333333">hgedik@gmail.com</font></a></td>
+    </tr>
+    <tr height="33">
+    <td height="33" style="height:33px;width:95px;">Öğr.Gör. Dr.</td>
+    <td style="width:153px;">Ebru YİĞİT</td>
+    <td style="width:99px;">DAKMAZ</td>
+    <td style="width:115px;">800 06 14-15</td>
+    <td style="width:207px;"><a href="mailto:ebruyigitdakmaz@gazi.edu.tr"><font color="#333333">ebruyigitdakmaz@gazi.edu.tr</font></a></td>
+    </tr>
+    <tr height="33">
+    <td height="33" style="height:33px;width:95px;">Öğr.Gör. Dr.</td>
+    <td style="width:153px;">Ahmet&nbsp;</td>
+    <td style="width:99px;">ATAK</td>
+    <td style="width:115px;">800 06 14-15</td>
+    <td style="width:207px;"><a href="mailto:ahmetatak@gazi.edu.tr"><font color="#333333">ahmetatak@gazi.edu.tr</font></a></td>
+    </tr>
+    <tr height="33">
+    <td height="33" style="height:33px;width:95px;">Öğr.Gör. Dr.</td>
+    <td style="width:153px;">Alper&nbsp;</td>
+    <td style="width:99px;">ALTUNÇEKİÇ</td>
+    <td style="width:115px;">800 06 14-15</td>
+    <td style="width:207px;"><a href="mailto:altuncekic@gazi.edu.tr"><font color="#333333">altuncekic@gazi.edu.tr</font></a></td>
+    </tr>
+    <tr height="33">
+    <td height="33" style="height:33px;width:95px;">Öğr.Gör. Dr.</td>
+    <td style="width:153px;">Harun</td>
+    <td style="width:99px;">KOÇAK</td>
+    <td style="width:115px;">800 06 14-15</td>
+    <td><a href="mailto:harunkocak@gazi.edu.tr"><font color="#333333">harunkocak@gazi.edu.tr</font></a></td>
+    </tr>
+    <tr height="33">
+    <td height="33" style="height:33px;width:95px;">Öğr. Gör.</td>
+    <td style="width:153px;">Mehmet&nbsp;</td>
+    <td style="width:99px;">HÜR</td>
+    <td style="width:115px;">800 06 14-15</td>
+    <td style="width:207px;"><a href="mailto:mhur@gazi.edu.tr"><font color="#333333">mhur@gazi.edu.tr</font></a></td>
+    </tr>
+    <tr height="33">
+    <td height="33" style="height:33px;width:95px;">Öğr. Gör.</td>
+    <td style="width:153px;">Ertuğrul</td>
+    <td style="width:99px;">DUMAN</td>
+    <td style="width:115px;">800 06 14-15</td>
+    <td style="width:207px;"><a href="mailto:dumanertugrul@gazi.edu.tr"><font color="#333333">dumanertugrul@gazi.edu.tr</font></a></td>
+    </tr>
+    <tr height="33">
+    <td height="33" style="height:33px;width:95px;">Öğr. Gör.</td>
+    <td style="width:153px;">Mahmut</td>
+    <td style="width:99px;">KASAP</td>
+    <td style="width:115px;">800 06 14-15</td>
+    <td style="width:207px;"><a href="mailto:mahmutkasap@gazi.edu.tr"><font color="#333333">mahmutkasap@gazi.edu.tr</font></a></td>
+    </tr>
+    <tr height="33">
+    <td height="33" style="height:33px;width:95px;">Öğr. Gör.</td>
+    <td style="width:153px;">Murat</td>
+    <td style="width:99px;">AKIN</td>
+    <td style="width:115px;">800 06 14-15</td>
+    <td style="width:207px;"><a href="mailto:muratakin@gazi.edu.tr"><font color="#333333">muratakin@gazi.edu.tr</font></a></td>
+    </tr>
+    <tr height="33">
+    <td height="33" style="height:33px;width:95px;">Öğr. Gör.</td>
+    <td style="width:153px;">Nazik&nbsp;</td>
+    <td style="width:99px;">ERDAL AKYÜZ</td>
+    <td style="width:115px;">800 06 14-15</td>
+    <td style="width:207px;"><a href="mailto:nazikakyuz@gazi.edu.tr"><font color="#333333">nazikakyuz@gazi.edu.tr</font></a></td>
+    </tr>
+    <tr height="33">
+    <td height="33" style="height:33px;width:95px;">Öğr. Gör.</td>
+    <td style="width:153px;">Mehmet Ali</td>
+    <td style="width:99px;">SARITİKEN</td>
+    <td style="width:115px;">800 06 14-15</td>
+    <td style="width:207px;"><a href="mailto:msaritiken@gazi.edu.tr"><font color="#333333">msaritiken@gazi.edu.tr</font></a></td>
+    </tr>
+    <tr height="33">
+    <td height="33" style="height:33px;width:95px;">Öğr.Gör.</td>
+    <td style="width:153px;">Yasin</td>
+    <td style="width:99px;">YÜKSEL</td>
+    <td style="width:115px;">800 06 14-15</td>
+    <td style="width:207px;"><a href="mailto:yasinyuksel@gazi.edu.tr"><font color="#333333">yasinyuksel@gazi.edu.tr</font></a></td>
+    </tr>
+    <tr height="33">
+    <td height="33" style="height:33px;width:95px;">Öğr. Gör.</td>
+    <td style="width:153px;">Erhan</td>
+    <td style="width:99px;">&nbsp;BARAN</td>
+    <td style="width:115px;">800 06 14-15</td>
+    <td style="width:207px;"><a href="mailto:erhanbaran@gazi.edu.tr"><font color="#333333">erhanbaran@gazi.edu.tr</font></a></td>
+    </tr>
+    <tr height="33">
+    <td height="33" style="height:33px;width:95px;">Öğr.Gör.</td>
+    <td style="width:153px;">Abdurrahman</td>
+    <td style="width:99px;">SELVİ</td>
+    <td style="width:115px;">800 06 14-15</td>
+    <td style="width:207px;"><a href="mailto:Abdurrahmanselvi@gazi.edu.tr"><font color="#333333">Abdurrahmanselvi@gazi.edu.tr</font></a></td>
+    </tr>
+    <tr height="33">
+    <td height="33" style="height:33px;width:95px;">Öğr.Gör.</td>
+    <td style="width:153px;">Kenan</td>
+    <td style="width:99px;">ÜNAL</td>
+    <td style="width:115px;">800 06 14-15</td>
+    <td style="width:207px;"><a href="mailto:kenanunal@gazi.edu.tr"><font color="#333333">kenanunal@gazi.edu.tr</font></a></td>
+    </tr>
+    <tr height="33">
+    <td height="33" style="height:33px;width:95px;">Öğr.Gör.</td>
+    <td style="width:153px;">Erkutay&nbsp;</td>
+    <td style="width:99px;">TAŞDEMİRCİ</td>
+    <td style="width:115px;">800 06 14-15</td>
+    <td style="width:207px;"><a href="mailto:erkutaytasdemirci@gazi.edu.tr"><font color="#333333">erkutaytasdemirci@gazi.edu.tr</font></a></td>
+    </tr>
+    <tr height="33">
+    <td height="33" style="height:33px;width:95px;">Öğr.Gör.</td>
+    <td style="width:153px;">Abdullah</td>
+    <td style="width:99px;">&nbsp;AHMETOĞLU</td>
+    <td style="width:115px;">800 06 14-15</td>
+    <td><a href="mailto:aahmetoglu@gazi.edu.tr"><font color="#333333">aahmetoglu@gazi.edu.tr</font></a></td>
+    </tr>
+    <tr height="33">
+    <td height="33" style="height:33px;width:95px;">Öğr.Gör.</td>
+    <td style="width:153px;">Mehmet Akif</td>
+    <td style="width:99px;">BAL</td>
+    <td style="width:115px;">800 06 14-15</td>
+    <td>mehmetakifbal@gazi.edu.tr</td>
+    </tr>
+        </tbody>
+        </table>  
+    </div>
+  
+    </div>
+  </diV>
+</ion-content>

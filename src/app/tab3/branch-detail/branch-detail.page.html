@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+        <ion-icon name="close-circle-outline" color="danger"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title id="overflow">
+      {{detay.brancheData.branchname}}
+    </ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+      <ion-card-title class="center">
+          {{detay.brancheData.branchname}}
+      </ion-card-title>
+      <ion-card-subtitle class="center">
+          {{detay.brancheData.branchemail}}
+      </ion-card-subtitle>
+      <ion-card-content class="center">
+        
+          {{detay.brancheData.branchaddress1}}<br />
+          {{detay.brancheData.branchaddress3}} / {{detay.brancheData.branchcity}}
+      </ion-card-content>
+  </ion-card>
+</ion-content>

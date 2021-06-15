@@ -1,0 +1,14 @@
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+#overflow{
+
+    width:"100%";
+    word-wrap: break-word;
+    overflow: visible;
+    white-space: initial;
+}

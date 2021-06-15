@@ -1,0 +1,55 @@
+{
+
+    "activities":
+    [
+        {
+
+            "id":1,
+            "name":"Akınsoft Robotik Yarışması",
+            "location":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d97887.93596631498!2d32.725496907783025!3d39.9414344280414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbda608ad56f1f424!2zQWvEsW5zb2Z0IEFua2FyYSBCw7ZsZ2UgTcO8ZMO8cmzDvMSfw7wtIEJpcmV5c2VsIEJpbGnFn2lt!5e0!3m2!1str!2str!4v1623673068413!5m2!1str!2str"
+            
+        },
+        {
+
+            "id":2,
+            "name":"Parantez Teknoloji Arge Çalışması",
+            "location":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3059.4160712434614!2d32.829206315242146!3d39.932081979424524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34ec5db5faa51%3A0xc30ca1837518daa4!2sParantez%20Teknoloji!5e0!3m2!1str!2str!4v1623673296169!5m2!1str!2str"
+            
+        },
+        {
+
+            "id":3,
+            "name":"Tusaş Ionic Mobil Tasarımlama",
+            "location":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3049.556596789323!2d32.651176815249194!3d40.15215957939679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x408276c02c887105%3A0x1c5ec14c2922033f!2zR0FaxLAgw5xOxLBWRVJTxLBURVPEsCBUVVNBxZ4gS0FaQU4gTUVTTEVLIFnDnEtTRUtPS1VMVQ!5e0!3m2!1str!2str!4v1623673780177!5m2!1str!2str"
+
+        },
+        {
+
+            "id":4,
+            "name":"Study Expo Yurtdışı Eğitim Fuarı",
+            "location":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1549.9092361646863!2d29.02684284248591!3d40.99083573123747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xeb491135e8b3927!2zxLBzdGFuYnVsIFl1cnRkxLHFn8SxIEXEn2l0aW0gRGFuxLHFn21hbmzEscSfxLE!5e0!3m2!1str!2str!4v1623673694417!5m2!1str!2str"
+
+        },
+        {
+
+            "id":5,
+            "name":"Antalya Altın Portakal Film Festivali Ödülleri",
+            "location":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1381.0711164013624!2d30.666778793143784!3d36.88440777837742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfe1ea535bef6a937!2zQXRhdMO8cmsgS8O8bHTDvHIgTWVya2V6aSAoQUtNKQ!5e0!3m2!1str!2str!4v1623673937713!5m2!1str!2str"
+
+        },
+        {
+
+            "id":6,
+            "name":"İzmir Global Gamejam",
+            "location":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3127.3008487097345!2d27.042887015193198!3d38.3882923796524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbdc4520665109%3A0xad9a73e98469f89f!2sT.C.%20%C4%B0zmir%20Ekonomi%20%C3%9Cniversitesi!5e0!3m2!1str!2str!4v1623674093351!5m2!1str!2str"
+
+        },
+        {
+
+            "id":7,
+            "name":"Malatya 12. Kayısı Festivali",
+            "location":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3128.9790481546115!2d38.37665031519197!3d38.349466979658835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x407637a0ecbc138b%3A0x384a8762da26ea90!2zTWnFn21pxZ8gUGFyayBGdWFyIEFsYW7EsQ!5e0!3m2!1str!2str!4v1623674170269!5m2!1str!2str"
+
+        }
+    ]
+}
